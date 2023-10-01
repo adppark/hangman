@@ -70,7 +70,9 @@
                   buttonLable="게임하러가기"
                   customClass="mr-[15px]"
                 />
-                <blackButton linkTo="#" @click="close" buttonLable="닫기" />
+                <div @click="close">
+                  <blackButton linkTo="" buttonLable="닫기" />
+                </div>
               </div>
             </DialogPanel>
           </TransitionChild>

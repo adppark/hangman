@@ -6,12 +6,13 @@
       </div>
       <div class="flex mt-[100px]">
         <blackButton linkTo="/2" buttonLable="게임시작" />
-        <blackButton
-          linkTo="/#"
-          buttonLable="랭킹보기"
-          customClass="ml-[15px]"
-          @click="scoreOpen = true"
-        />
+        <div @click="scoreOpen = true">
+          <blackButton
+            linkTo=""
+            buttonLable="랭킹보기"
+            customClass="ml-[15px]"
+          />
+        </div>
         <blackButton
           linkTo="/option"
           buttonLable="옵션설정"

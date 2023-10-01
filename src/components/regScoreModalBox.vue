@@ -89,20 +89,25 @@
                 class="flex mt-[40px] justify-center"
                 v-if="isReged === false"
               >
-                <blackButton
-                  linkTo="#"
-                  @click="storeScore"
-                  customClass="mr-[15px]"
-                  buttonLable="등록"
-                />
-                <blackButton linkTo="#" @click="close" buttonLable="취소" />
+                <div @click="storeScore">
+                  <blackButton
+                    linkTo=""
+                    customClass="mr-[15px]"
+                    buttonLable="등록"
+                  />
+                </div>
+                <div @click="close">
+                  <blackButton linkTo="" buttonLable="취소" />
+                </div>
               </div>
 
               <div
                 class="flex mt-[40px] justify-center"
                 v-if="isReged === true"
               >
-                <blackButton linkTo="#" @click="close" buttonLable="닫기" />
+                <div @click="close">
+                  <blackButton linkTo="" buttonLable="닫기" />
+                </div>
               </div>
             </DialogPanel>
           </TransitionChild>
@@ -162,7 +167,8 @@ export default {
         sec: this.sec,
       };
       this.$store.commit('addScore', data);
-      console.log(this.username, this.userScore, this.min, this.sec);
+
+      this.scoreList = this.$store.getters.getScoreList;
       this.isReged = true;
     },
     close() {

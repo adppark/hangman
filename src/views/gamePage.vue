@@ -12,7 +12,11 @@
               'text-red-600': a.matched === 'finish',
             }"
           >
-            {{ a.matched === 'true' || a.matched === 'finish' ? a.char : ' ' }}
+            {{
+              a.matched === 'true' || a.matched === 'finish'
+                ? a.char.toUpperCase()
+                : ' '
+            }}
           </div>
         </div>
 
@@ -35,13 +39,13 @@
             buttonLable="다시하기"
             customClass="ml-[15px]"
           />
-          <blackButton
-            linkTo="#"
-            buttonLable="점수기록"
-            customClass="ml-[15px]"
-            v-if="step === 99"
-            @click="showScoreModal = true"
-          />
+          <div @click="showScoreModal = true" v-if="step === 99">
+            <blackButton
+              linkTo=""
+              buttonLable="점수기록"
+              customClass="ml-[15px]"
+            />
+          </div>
           <blackButton
             linkTo="/"
             buttonLable="홈으로"
@@ -87,7 +91,7 @@
 
     <div
       class="flex w-[50%] mt-[30px] justify-center items-center flex-wrap"
-      v-if="step !== 99"
+      v-if="step !== 99 && this.step !== 8"
     >
       <blackButton linkTo="/" buttonLable="홈으로" customClass="ml-[15px]" />
       <blackButton linkTo="/2" buttonLable="다시하기" customClass="ml-[15px]" />

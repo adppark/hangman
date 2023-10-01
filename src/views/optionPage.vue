@@ -74,7 +74,7 @@
                 name="about"
                 rows="15"
                 v-model="wordListStr"
-                class="block w-full px-3 py-2 rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-0 focus:ring-inset focus:ring-gray-400"
+                class="block w-full px-3 py-2 rounded-md border-0 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-0 focus:ring-inset focus:ring-gray-400"
               />
             </div>
           </div>

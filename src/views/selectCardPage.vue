@@ -13,12 +13,13 @@
       </div>
       <div class="flex flex-row w-full justify-center items-center mt-[20px]">
         <blackButton linkTo="/" buttonLable="홈으로" />
-        <blackButton
-          linkTo="#"
-          buttonLable="카드섞기"
-          customClass="ml-[15px]"
-          @click="refreshWords"
-        />
+        <div @click="refreshWords">
+          <blackButton
+            linkTo=""
+            buttonLable="카드섞기"
+            customClass="ml-[15px]"
+          />
+        </div>
       </div>
     </div>
   </div>
